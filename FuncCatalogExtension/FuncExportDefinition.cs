@@ -11,7 +11,7 @@ namespace FuncCatalogExtension
         public FuncExportDefinition(Type exportedType,
             Func<ExportProvider, object> factory) :
             base(AttributedModelServices.GetTypeIdentity(exportedType),
-            new Dictionary<string, object> { { "ExportTypeIdentity", AttributedModelServices.GetTypeIdentity(exportedType) } })
+            new Dictionary<string, object> { { CompositionConstants.ExportTypeIdentityMetadataName, AttributedModelServices.GetTypeIdentity(exportedType) } })
         {
             this.Factory = factory;
         }
